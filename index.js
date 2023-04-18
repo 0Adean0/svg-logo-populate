@@ -27,10 +27,19 @@ maxLength: 3,
     type: "input",
     name: "shapeColor",
     message: "Type your desired shape color using a color keyword or its hexidecimal values if known"
-}
+}])
+.then((response) => {
+    console.log(response)
+    writeSVG("personal-logo.svg", response)
+})
+
+const writeSVG = (fileName,data) => {
+    if (data.shape === "circle") {
+        const shape = new shapes.Circle(data.textColor, data.shapeColor, data.text)
+        fs.writeFile(fileName, shape.generateCircle(data.textColor, data.shapeColor, data.text), (err) => err?
+        console.log(err) : console.log("Generated Personal-Logo.svg"))
+    }
+
 
 }
-
-
-
 }])
