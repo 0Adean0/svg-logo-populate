@@ -38,8 +38,15 @@ const writeSVG = (fileName,data) => {
         const shape = new shapes.Circle(data.textColor, data.shapeColor, data.text)
         fs.writeFile(fileName, shape.generateCircle(data.textColor, data.shapeColor, data.text), (err) => err?
         console.log(err) : console.log("Generated Personal-Logo.svg"))
+    } else if (data.shape === "triangle") {
+        const shape = new shapes.Triangle(data.textColor, data.shapeColor, data.text)
+        fs.writeFile(fileName, shape.generateTriangle(data.textColor, data.shapeColor, data.text), (err) => err?
+        console.log(err) : console.log("Generated Personal-Logo.svg"))
     }
-
+        else if (data.shape === "Rectangle") {
+            const shape = new shapes.Rectangle(data.textColor, data.shapeColor, data.text)
+            fs.writeFile(fileName, shape.generateCircle(data.textColor, data.shapeColor, data.text), (err) => err?
+            console.log(err) : console.log("Generated Personal-Logo.svg"))
 
 }
-}])
+}
