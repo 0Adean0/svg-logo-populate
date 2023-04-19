@@ -4,19 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js",
+    "start": "node index.js",
     "test": "jest"
   },
-
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "i": "^0.3.7",
+    "inquirer": "^8.2.4",
+    "inquirer-maxlength-input-prompt": "^1.0.2",
+    "npm": "^9.6.4"
   },
-
   "devDependencies": {
     "jest": "^28.1.3"
   }
 }
-
